@@ -1,0 +1,19 @@
+.education, .hobby, .language, .skills, .works {
+    .edit-links {
+        .fas {
+            padding: .8rem;
+            border-radius: 50%;
+            transition: .2s ease;
+            font-size: 1.1rem;
+
+            &:hover {
+                color: #c71c22;
+                background: #e2e3e5;
+            }
+        }
+        a:hover, a:focus {
+            color: #c71c22;
+        }
+    }
+
+}

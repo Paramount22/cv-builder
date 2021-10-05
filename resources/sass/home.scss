@@ -1,0 +1,17 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+
+    h2 {
+        font-size: 5rem;
+        margin: 2rem;
+        text-shadow: 0 4px 4px lightgrey;
+    }
+
+    a {
+        font-size: 1.8rem;
+    }
+}
