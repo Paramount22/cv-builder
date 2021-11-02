@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
          //\App\Models\User::factory(3)->create();
-        //$this->call(LevelSeeder::class);
-        //$this->call(DrivingLicenseSeeder::class);
-        //$this->call(LanguageLevelSeeder::class);
+        $this->call(LevelSeeder::class);
+        $this->call(DrivingLicenseSeeder::class);
+        $this->call(LanguageLevelSeeder::class);
 
     }
 }

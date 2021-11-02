@@ -30,9 +30,12 @@
             @include('_partials.authMessage')
             @include('layouts.breadcrumb')
             <flash-message text="{{session('flash')}}"></flash-message>
+            <section class="d-flex justify-content-center mb-3">
                 @if( isset($user) )
                     <user-info :user="{{$user}}"></user-info>
                 @endif
+            </section>
+
 
             @yield('content')
         </main>

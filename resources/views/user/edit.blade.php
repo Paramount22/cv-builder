@@ -12,6 +12,7 @@
                         <h6 class="m-0 text-dark">Zmena e-mailovej adresy</h6>
                     </div>
 
+
                     <div class="card-body">
                         <form action="{{route('user.email.update', $user)}}" method="post"
                               @submit.prevent="updateEmail">

@@ -1,12 +1,13 @@
 <template>
     <div>
-       <div v-if="!updatedEmail">
+        Email:
+       <span v-if="!updatedEmail">
            {{user.email}}
-       </div>
+       </span>
 
-        <div v-if="updatedEmail">
+        <span v-if="updatedEmail">
             {{updatedEmail}}
-        </div>
+        </span>
     </div>
 </template>
 
@@ -44,5 +45,7 @@
 </script>
 
 <style scoped>
-
+    span {
+        font-weight: bolder;
+    }
 </style>

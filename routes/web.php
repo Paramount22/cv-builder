@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
+
+
 Route::view('/', 'home.index');
 /*User*/
 Route::middleware(['auth'])->group(function () {
@@ -47,10 +49,12 @@ Route::middleware(['auth'])->group(function () {
 });
 
 /*Admin*/
-Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-    Route::resources([
-        'levels' => LevelController::class,
-    ]);
-});
+//Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
+//    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+//    Route::resources([
+//        'levels' => LevelController::class,
+//    ]);
+//});
+
+
 
