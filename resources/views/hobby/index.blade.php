@@ -4,7 +4,7 @@
     <section class="hobby">
         <div class="row justify-content-center mb-4">
             <div class="col-8">
-                <h2 class="text-dark ">Záujmy alebo koníčky</h2>
+                <h2 class="text-white text-bold">Záujmy alebo koníčky</h2>
             </div>
 
         </div>

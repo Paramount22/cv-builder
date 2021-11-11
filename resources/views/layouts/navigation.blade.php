@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -13,7 +13,7 @@
                 @auth
                     <li>
                         <!-- Button trigger modal -->
-                        <a href="" class="btn btn-outline-warning" data-toggle="modal" data-target="#resumeModal">
+                        <a href="" class="btn btn-warning" data-toggle="modal" data-target="#resumeModal">
                             <i class="fas fa-eye"></i>   Náhľad CV
                         </a>
                     </li>
@@ -73,15 +73,15 @@
                             @endcan
 
                             @if(auth()->user()->userDetail)
-                                <a class="dropdown-item" href="{{route('user-details.index')}}">
+                                <a class="dropdown-item text-dark" href="{{route('user-details.index')}}">
                                     <i class="fas fa-user"></i>  {{ __('CV Profil') }}
                                 </a>
                             @endif
-                                <a class="dropdown-item" href="{{route('user.edit', auth()->id())}}">
+                                <a class="dropdown-item text-dark" href="{{route('user.edit', auth()->user()->uuid)}}">
                                     <i class="fas fa-unlock"></i>  {{ __('Zmena údajov') }}
                                 </a>
 
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 <i class="fas fa-sign-out-alt"></i>  {{ __('Odhlásiť sa') }}

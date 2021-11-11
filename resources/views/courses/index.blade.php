@@ -6,7 +6,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8 d-flex justify-content-between align-items-center mb-4">
-                <h2 class=" text-dark">Kurz alebo certifikát</h2>
+                <h2 class="text-white text-bold">Kurz alebo certifikát</h2>
                 <span>
                     <a href="{{route('courses.create')}}">
                         <button class="btn btn-sm btn-outline-dark">

@@ -26,9 +26,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
-Route::view('/', 'home.index');
+Route::get('/', function () {
+    return view('home.index');
+});
 /*User*/
 Route::middleware(['auth'])->group(function () {
+
+
 
     Route::resources([
         'user-details' => UserDetailController::class,
@@ -44,8 +48,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('user/{user}/password', [UserController::class, 'updatePassword'])->name('user.password.update');
     Route::get('user/{user}', [UserController::class, 'show'])->name('user.show');
     // resume
-    Route::get('resume', [ResumeController::class, 'index'])->name('resume.index');
-    Route::get('resume/download', [ResumeController::class, 'download'])->name('resume.download');
+    Route::get('/resume/download', [ResumeController::class, 'download'])->name('resume.download');
+    Route::get('/resume', [ResumeController::class, 'index'])->name('resume.index');
+
 });
 
 /*Admin*/

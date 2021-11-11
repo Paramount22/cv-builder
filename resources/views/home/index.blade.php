@@ -1,30 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="home">
-        <h2 class="text-dark">Životopis</h2>
+    <section class="home d-flex justify-content-center align-items-center flex-column">
 
-        @if(auth()->user())
-            @if( auth()->user()->userDetail)
-                <span>
+        <div class="cv d-flex justify-content-center align-items-center flex-column">
+            <h2>Životopis</h2>
+
+            @if(auth()->user())
+                @if( auth()->user()->userDetail)
+                    <span>
                 <a class="btn btn-lg btn-outline-warning shadow" href="{{route('user-details.index')}}">
-                    Môj profil
+                    Môj CV profil
                 </a>
             </span>
-            @endif
+                @endif
 
-        @else
-            <span>
-                <a class="btn btn-lg btn-outline-primary" href="{{route('user-details.create')}}">Vytvor si svoj životopis</a>
-            </span>
-        @endif
-
-        @if(auth()->user())
-            @if(!auth()->user()->userDetail)
+            @else
                 <span>
-                <a class="btn btn-lg btn-outline-primary" href="{{route('user-details.create')}}">Vytvor si svoj životopis</a>
+                <a class="btn btn-lg btn-outline-secondary" href="{{route('user-details.create')}}">Vytvor si svoj
+                    životopis</a>
             </span>
             @endif
-        @endif
+
+            @if(auth()->user())
+                @if(!auth()->user()->userDetail)
+                    <span>
+                <a class="btn btn-lg btn-outline-secondary" href="{{route('user-details.create')}}">Vytvor si svoj
+                    životopis</a>
+            </span>
+                @endif
+            @endif
+        </div>
+
     </section>
 @endsection

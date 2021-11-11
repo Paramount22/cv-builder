@@ -66,4 +66,6 @@ class LoginController extends Controller
 
         return $this->loggedOut($request) ?: redirect('/')->with('authMessage', 'Odhlásenie úspešné.' );
     }
+
+
 }

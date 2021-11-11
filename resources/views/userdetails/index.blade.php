@@ -4,7 +4,7 @@
     <section class="user-detail">
         <div class="row justify-content-center mb-4">
             <div class="col-8">
-                <h2 class="text-dark ">Základné údaje</h2>
+                <h2 class="text-white text-bold">Základné údaje</h2>
             </div>
 
         </div>

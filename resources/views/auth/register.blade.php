@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="login-register">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow">
@@ -48,15 +48,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group offset-lg-4">
-                            {!! NoCaptcha::renderJs() !!}
-                            {!! NoCaptcha::display() !!}
+{{--                        <div class="form-group offset-lg-4">--}}
+{{--                            {!! NoCaptcha::renderJs() !!}--}}
+{{--                            {!! NoCaptcha::display() !!}--}}
 
-                        </div>
+{{--                        </div>--}}
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-secondary">
                                     {{ __('Registrácia') }}
                                 </button>
                             </div>

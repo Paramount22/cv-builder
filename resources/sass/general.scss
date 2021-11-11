@@ -1,12 +1,15 @@
 body {
     font-size: 100%;
-    background: #ECE9E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    .breadcrumb {
-        background: lightgrey;
-    }
+    //animation: opening .8s ease;
+    background:  #0F2027;
+
 }
+
+main {
+    min-height: calc(100vh - 69.2px);
+}
+
+
 
 .alert-success {
     color: #0f5132;
@@ -19,5 +22,14 @@ body {
         font-weight: bolder;
     }
 }
+
+.text-white {
+    color: white;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
 
 

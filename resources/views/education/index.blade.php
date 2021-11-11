@@ -6,10 +6,10 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8 d-flex justify-content-between align-items-center mb-4">
-                <h2 class=" text-dark">Vzdelanie</h2>
+                <h2 class="text-white text-bold">Vzdelanie</h2>
                 <span>
                     <a href="{{route('education.create')}}">
-                        <button class="btn btn-sm btn-outline-dark">
+                        <button class="btn btn-sm btn-outline-secondary">
                           <i class="fas fa-plus mr-1"></i>  Pridať vzdelanie
                         </button>
                     </a>
@@ -121,7 +121,7 @@
                         Pokračovať na pracovné skúsenosti
                     </a>
                 @else
-                    <a class="btn btn-outline-dark" href="{{route('works.create')}}">
+                    <a class="btn btn-outline-secondary" href="{{route('works.create')}}">
                         Pokračovať na pracovné skúsenosti
                     </a>
                 @endif

@@ -1,11 +1,11 @@
 <template>
     <div>
-        Email:
-       <span v-if="!updatedEmail">
+      <span class="text-white">Email:</span>
+       <span class="text-white" v-if="!updatedEmail">
            {{user.email}}
        </span>
 
-        <span v-if="updatedEmail">
+        <span class="text-white" v-if="updatedEmail">
             {{updatedEmail}}
         </span>
     </div>
