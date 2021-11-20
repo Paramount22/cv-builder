@@ -67,5 +67,14 @@ class LoginController extends Controller
         return $this->loggedOut($request) ?: redirect('/')->with('authMessage', 'Odhlásenie úspešné.' );
     }
 
+    /**
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    protected function authenticated()
+    {
+        if (auth()->user()) {
+            return redirect('/');
+        }
+    }
 
 }

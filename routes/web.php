@@ -25,15 +25,10 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 
+Route::view('/', 'home.index');
 
-Route::get('/', function () {
-    return view('home.index');
-});
 /*User*/
 Route::middleware(['auth'])->group(function () {
-
-
-
     Route::resources([
         'user-details' => UserDetailController::class,
         'education' => EducationController::class,

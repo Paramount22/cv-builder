@@ -77,7 +77,7 @@
                                     <i class="fas fa-user"></i>  {{ __('CV Profil') }}
                                 </a>
                             @endif
-                                <a class="dropdown-item text-dark" href="{{route('user.edit', auth()->user()->uuid)}}">
+                                <a class="dropdown-item text-dark" href="{{route('user.edit', auth()->user()->id)}}">
                                     <i class="fas fa-unlock"></i>  {{ __('Zmena údajov') }}
                                 </a>
 
