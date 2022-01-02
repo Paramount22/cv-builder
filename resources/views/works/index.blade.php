@@ -6,7 +6,9 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8 d-flex justify-content-between align-items-center mb-4">
-                <h2 class="text-bold text-white">Pracovné skúsenosti</h2>
+                @if(auth()->user()->works())
+                    <h2 class="text-bold text-white">Pracovné skúsenosti</h2>
+                @endif
                 <span>
                     <a href="{{route('works.create')}}">
                         <button class="btn btn-sm btn-outline-dark">

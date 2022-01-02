@@ -7,9 +7,17 @@
     <title>Resume</title>
 </head>
 <style>
-    body {
-        font-family: sans-serif;
+   /* @font-face {
+        font-family: 'DejaVuSans';
+        src: url({{ asset('fonts/DejaVuSans.ttf') }});
+        font-style: normal;
+        font-weight: normal;
+    }*/
 
+
+    body {
+        font-family: Verdana;
+        font-weight: normal;
     }
 
     * {
@@ -83,6 +91,10 @@
         font-size: 80%;
     }
 
+    strong {
+        display: flex;
+    }
+
 </style>
 <body class="container">
 
@@ -100,8 +112,10 @@
 
         @if(isset($user->works))
             <section class="user-works">
-                <h3>PRACOVNÉ SKÚSENOSTI</h3>
                 @foreach($user->works as $work)
+                        @if ($loop->first)
+                            <h3>Pracovné skúsenosti</h3>
+                        @endif
                     <h4> {{$work->employer}}</h4>
                     <p> {{$work->job_title}}  </p>
                     <p>
@@ -124,8 +138,10 @@
 
         @if(isset($user->education))
             <section class="user-education">
-                <h3>Vzdelanie</h3>
                     @foreach($user->education as $education)
+                    @if ($loop->first)
+                        <h3>Vzdelanie</h3>
+                    @endif
                         <h4> {{$education->school_name}}</h4>
                         <p> {{$education->field_of_study}} </p>
                         <p> {{$education->FullFormatDate}}, {{$education->city}} </p>
@@ -135,8 +151,11 @@
 
         @if(isset($user->courses))
             <section class="user-courses">
-                <h3>Kurz alebo certifikát </h3>
+
                 @foreach($user->courses as $course)
+                    @if($loop->first)
+                        <h3>Kurz alebo certifikát </h3>
+                    @endif
                     <h4>{{$course->institution}}</h4>
                     <p>{{$course->title}}, {{$course->FullFormatDate}}</p>
                     <p>{{$course->description}}</p>
@@ -146,8 +165,11 @@
 
         @if(isset($user->skills))
             <section class="user-skills">
-                <h3>Znalosti </h3>
+
                     @foreach($user->skills as $skill)
+                        @if($loop->first)
+                            <h3>Znalosti </h3>
+                        @endif
                         <p> <strong>{{$skill->name}}</strong>  - {{$skill->level->name}}</p>
                     @endforeach
             </section>
@@ -155,8 +177,10 @@
 
         @if(isset($user->languages))
             <section class="user-languages">
-                <h3>Jazyky</h3>
                 @foreach($user->languages as $language)
+                    @if($loop->first)
+                        <h3>Jazyky </h3>
+                    @endif
                     <p> <strong>{{$language->language}}</strong>  - {{$language->languageLevel->name}}</p>
                 @endforeach
             </section>
@@ -164,16 +188,20 @@
 
         @if( isset($user->userDetail->drivingLicenses) )
             <section class="user-languages">
-                <h3>Vodičský preukaz</h3>
                 @foreach($user->userDetail->drivingLicenses as $license)
-                    <p> <strong>{{$license->group}} </strong> </p>
+                    @if($loop->first)
+                        <h3>Vodičský preukaz </h3>
+                    @endif
+                    <p class="groups"> <strong>{{$license->group}} </strong> </p>
                 @endforeach
             </section>
         @endif
 
         @if(isset($user->hobby))
             <section class="user-hobby">
-                <h3>Záujmy alebo koníčky</h3>
+                @if($user->hobby != '')
+                    <h3>Záujmy alebo koníčky</h3>
+                @endif
                     <p> {{$user->hobby->text}}  </p>
             </section>
         @endif

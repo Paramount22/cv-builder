@@ -14,14 +14,12 @@
                 </a>
             </span>
                 @endif
-
             @else
                 <span>
                 <a class="btn btn-lg btn-outline-secondary" href="{{route('user-details.create')}}">Vytvor si svoj
                     životopis</a>
             </span>
             @endif
-
             @if(auth()->user())
                 @if(!auth()->user()->userDetail)
                     <span>

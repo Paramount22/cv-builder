@@ -9,7 +9,7 @@
                 <h2 class="text-white text-bold">Jazyky</h2>
                 <span>
                     <a href="{{route('languages.create')}}">
-                        <button class="btn btn-sm btn-outline-dark">
+                        <button class="btn btn-sm btn-outline-secondary">
                           <i class="fas fa-plus mr-1"></i>  Pridať jazyk
                         </button>
                     </a>

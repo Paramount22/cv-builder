@@ -11,12 +11,14 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 @auth
+                    @if(auth()->user()->userDetail)
                     <li>
                         <!-- Button trigger modal -->
                         <a href="" class="btn btn-warning" data-toggle="modal" data-target="#resumeModal">
                             <i class="fas fa-eye"></i>   Náhľad CV
                         </a>
                     </li>
+                    @endif
                 @endauth
             </ul>
 

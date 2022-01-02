@@ -27,6 +27,7 @@
         @include('layouts.navigation')
 
         <main class="py-4 container">
+
             @include('_partials.authMessage')
             @include('layouts.breadcrumb')
             <flash-message text="{{session('flash')}}"></flash-message>

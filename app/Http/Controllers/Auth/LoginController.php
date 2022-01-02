@@ -68,8 +68,8 @@ class LoginController extends Controller
     }
 
     /**
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     */
+ * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+ */
     protected function authenticated()
     {
         if (auth()->user()) {
